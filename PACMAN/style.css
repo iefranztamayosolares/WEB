@@ -1,0 +1,89 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para el cuerpo */
+body {
+  background:darkslategray ;
+  font-family: sans-serif;
+  width: 100%;
+  height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  margin: 0 auto;
+  display: flex; /* Usamos flexbox para centrar el contenido */
+  flex-direction: column; /* Los elementos estarán en columna */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  text-align: center;
+  color: yellow;
+  padding: 10px 0; /* Espaciado en la parte superior e inferior */
+}
+
+/* Estilo de Pacman */
+#pacman {
+  height: 100vw; /* Ajuste relativo al ancho de la pantalla */
+  width: 200vw;  /* Ajuste relativo al ancho de la pantalla */
+  border-radius: 5px;
+  margin: 5px 0; /* Espaciado arriba y abajo */
+  max-width: 600px; /* Evita que se expanda más allá del contenedor */
+}
+
+/* Estilo de texto invisible */
+#shim {
+  font-family: 'Permanent Marker', cursive;
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Estilo de los encabezados */
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  color: yellow;
+  font-size: 4vw; /* Usamos tamaño relativo al ancho de la pantalla */
+  margin-top: 300px;
+}
+
+/* Estilo de enlaces */
+a {
+  text-decoration: none;
+  color: #0000FF;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 600px) {
+  #pacman {
+    height: 500px; /* Ajuste de tamaño fijo en pantallas pequeñas */
+    width: 500px;  /* Ajuste de tamaño fijo en pantallas pequeñas */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+}
+
+/* Media Queries para pantallas intermedias */
+@media (max-width: 900px) and (min-width: 601px) {
+  #pacman {
+    height: 30vw; /* Ajuste proporcional para pantallas medianas */
+    width: 25vw;  /* Ajuste proporcional para pantallas medianas */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Aumenta el tamaño del título para pantallas medianas */
+  }
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 1200px) {
+  #pacman {
+    height: 470px; /* Mantiene el tamaño original en pantallas grandes */
+    width: 382px;  /* Mantiene el tamaño original en pantallas grandes */
+  }
+
+  h1 {
+    font-size: 3rem; /* Aumenta el tamaño del título en pantallas grandes */
+  }
+}
